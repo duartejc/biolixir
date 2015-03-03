@@ -3,7 +3,7 @@ Biolixir
 
 Solutions for Rosalind (http://rosalind.info/) problems.
 
-These are solutions already implemented:
+These are the solutions already implemented:
 
 http://rosalind.info/problems/dna/
 
