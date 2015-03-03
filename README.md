@@ -9,3 +9,8 @@ These are the solutions already implemented:
 * Transcribing DNA into RNA (http://rosalind.info/problems/rna/)
 * Complementing a Strand of DNA (http://rosalind.info/problems/revc/)
 
+### Running Tests
+
+```bash
+$ mix test
+```
