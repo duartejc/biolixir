@@ -1,7 +1,7 @@
 Biolixir
 ========
 
-Solutions for Rosalind (http://rosalind.info/) problems.
+Solutions for [Rosalind](http://rosalind.info/) problems.
 
 These are the solutions already implemented:
 
