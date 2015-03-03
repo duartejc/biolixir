@@ -5,9 +5,7 @@ Solutions for Rosalind (http://rosalind.info/) problems.
 
 These are the solutions already implemented:
 
-http://rosalind.info/problems/dna/
-
-http://rosalind.info/problems/rna/
-
-http://rosalind.info/problems/revc/
+* Counting DNA Nucleotides (http://rosalind.info/problems/dna/)
+* Transcribing DNA into RNA (http://rosalind.info/problems/rna/)
+* Complementing a Strand of DNA (http://rosalind.info/problems/revc/)
 
