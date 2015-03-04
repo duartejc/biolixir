@@ -36,7 +36,22 @@ defmodule BiolixirTest do
     assert FIB.wascally_wabbits(2, 3) == 1
     assert FIB.wascally_wabbits(3, 3) == 4
     assert FIB.wascally_wabbits(5, 3) == 19
+  end
 
+  """
+    Given: Positive integers n≤100 and m≤20.
+    Return: The total number of pairs of rabbits that will remain after the n-th month if all rabbits live for m months.
+  """
+  test "calculate Wabbit Season" do
+    assert FIBD.wabbit_season(1, 3) == 1
+    assert FIBD.wabbit_season(2, 3) == 1
+    assert FIBD.wabbit_season(3, 3) == 2
+    assert FIBD.wabbit_season(6, 3) == 4
+    assert FIBD.wabbit_season(7, 3) == 5
+    assert FIBD.wabbit_season(8, 3) == 7
+    assert FIBD.wabbit_season(9, 3) == 9
+    assert FIBD.wabbit_season(10, 3) == 12
+    assert FIBD.wabbit_season(11, 3) == 16
   end
 
   test "read dataset" do
