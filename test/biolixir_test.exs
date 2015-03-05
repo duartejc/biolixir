@@ -6,7 +6,8 @@ defmodule BiolixirTest do
     Return: Four integers (separated by spaces) counting the respective number of times that the symbols 'A', 'C', 'G', and 'T' occur in s.
   """
   test "counts DNA nucleotides" do
-    assert DNA.count_nucleotides(String.to_char_list("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")) == "20 12 17 21"
+    count = DNA.count_nucleotides(String.to_char_list("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"))
+    assert "#{count["A"]} #{count["C"]} #{count["G"]} #{count["T"]}" == "20 12 17 21"
   end
 
   """
@@ -52,6 +53,19 @@ defmodule BiolixirTest do
     assert FIBD.wabbit_season(9, 3) == 9
     assert FIBD.wabbit_season(10, 3) == 12
     assert FIBD.wabbit_season(11, 3) == 16
+  end
+
+  """
+    Given: At most 10 DNA strings in FASTA format (of length at most 1 kbp each).
+    Return: The ID of the string having the highest GC-content, followed by the GC-content of that string. Rosalind allows for a default error of 0.001 in all decimal answers unless otherwise stated;
+  """
+  test "it can find the highest GC-content," do
+    {:ok, data} = File.read("gc.txt")
+    assert GC.find_highest(data) == {"Rosalind_7398", 52.083333333333336}
+  end
+
+  test "it calculates GC content" do
+    assert GC.calculate_gc_content("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC") == 41.42857142857143
   end
 
   test "read dataset" do

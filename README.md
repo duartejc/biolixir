@@ -10,6 +10,7 @@ These are the solutions already implemented:
 * Complementing a Strand of DNA (http://rosalind.info/problems/revc/)
 * Rabbits and Recurrence Relations (http://rosalind.info/problems/fib/)
 * Mortal Fibonacci Rabbits (http://rosalind.info/problems/fibd/)
+* Computing GC Content (http://rosalind.info/problems/gc/)
 
 ### Running Tests
 
