@@ -68,6 +68,22 @@ defmodule BiolixirTest do
     assert GC.calculate_gc_content("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC") == 41.42857142857143
   end
 
+  """
+    Given: Two DNA strings s and t of equal length (not exceeding 1 kbp).
+    Return: The Hamming distance dH(s,t).
+  """
+  test "it counts point mutation" do
+    assert HAMM.count_point_mutation("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT") == 7
+  end
+
+  """
+    Given: Two DNA strings s and t (each of length at most 1 kbp).
+    Return: All locations of t as a substring of s.
+  """
+  test "it can find a motif in DNA" do
+    assert SUBS.find_motif("GATATATGCATATACTT", "ATAT") == [2, 4, 10]
+  end
+
   test "read dataset" do
     {:ok, data} = File.read("dna.txt")
     assert is_binary(data)
